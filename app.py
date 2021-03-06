@@ -2,14 +2,20 @@
 
 From flask import flask, render_template, request
 App = Flask(__name__)
-Model_TSLA = pickle.load(open(‘model_tesla.pkl’,’rb’))
+
+#if we create our own model can use pickle. 
+Model_TSLA = pickle.load(open(‘test_model.pkl’,’rb’))
+
+
 
 #create route for home route
 @app.route("/")
 
 def home():
     return render_template('index.html')
-#create route for prediction to appear on Tesla.html
+
+#IF CREATING OWN MODEL.
+create route for prediction to appear on Tesla.html
 @app.route('/predict',methods=['POST'])
 
 def predict():
