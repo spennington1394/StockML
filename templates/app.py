@@ -1,7 +1,6 @@
 #dependencies to create flask app and machine learning model
 
 From flask import flask, render_template, request
-import tesla_model.py
 App = Flask(__name__)
 
 #if we create our own model can use pickle. 
